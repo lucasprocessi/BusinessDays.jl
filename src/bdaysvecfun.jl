@@ -158,4 +158,4 @@ function advancebdays(hc::HolidayCalendar, dt::Date, bdays_count_vec::Vector{Int
 end
 
 advancebdays(calendar, dt::Date, bdays_count_vec::Vector{Int}) = advancebdays(convert(HolidayCalendar, calendar), dt, bdays_count_vec)
-advancebdays(hc, dt::Date, bdays_range::UnitRange{Int}) = advancebdays(hc, dt, collect(bdays_range))
+advancebdays(hc, dt::Date, bdays_range::Range) = advancebdays(hc, dt, collect(bdays_range))
